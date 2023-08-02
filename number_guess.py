@@ -4,7 +4,7 @@ class randomNumber:
         self.lower_bound = lower_bound
         self.upper_bound = upper_bound
         bounds_set = set()
-        random_number_str = ""
+        # random_number_str = ""
         random_number = -1
 
         def oneDigit():
@@ -19,7 +19,7 @@ class randomNumber:
             return final_str_num
         
         #building the random number
-        bounds = self.upper_bound + 1 - self.lower_bound
+        bounds = self.upper_bound + 1
         str_bounds = repr(bounds)
 
         if self.lower_bound < 0 or self.upper_bound < 0:
@@ -28,21 +28,21 @@ class randomNumber:
             #making a set of all potential numbers
             for x in range(self.lower_bound, self.upper_bound+1):
                 bounds_set.add(x)
-                print(bounds_set)
+                # print(bounds_set)
 
         while random_number not in bounds_set:
                 #selecting random digits
-                print(random_number)
+                random_number_str = ""
                 for x in range(len(str_bounds)):
                     print(f'loop {x}')
                     one_digit = oneDigit()
                     print(f'one_digit {one_digit}')
                     random_number_str += one_digit
                 random_number = int(random_number_str)
-                # print(random_number)
 
-        return print(random_number)
+        return print(f"This the random number {random_number}")
+        # return random_number
         
         
 
-number = randomNumber(1,10)
+number = randomNumber(90000,100000)
