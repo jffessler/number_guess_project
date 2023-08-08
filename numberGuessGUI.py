@@ -12,22 +12,23 @@ greeting = tk.Label(text="Welcome to Number Guesser!").pack()
 
 # Function call button
 button = tk.Button(window,
-                    text="Play Number Guesser?!",
-                    width=15,
-                    height=2,
+                    text="Play Number Guesser?! \n Click \n Return to Script CLI",
+                    width=50,
+                    height=25,
                     fg="black",
                     bg="white",
                     activebackground="red",
-                    # command=game.play_Game 
+                    command=game.play_Game,
+                    # command = window.quit
                     ).pack()
 
-frame1 = tk.Frame(window,bg="skyblue3", width=400,height=500)
+frame1 = tk.Frame(window,bg="skyblue3", width=300,height=200)
 # frame1.place(x=640, y=400)
 frame1.pack(fill='both',expand='yes')
-# frame2 = Frame(window,width=25,height=25)
+L1 = tk.Label(frame1,text="Lower Bound").pack()
+E1 = tk.Entry(frame1,bd=5).pack()
 
-L1 = tk.Label(frame1,text="Lower Bound").pack(side=LEFT)
-E1 = tk.Entry(frame1,bd=5).pack(side=RIGHT)
+# frame2 = Frame(window,width=25,height=25)
 # L2 = Label(frame2,text="Upper Bound").pack(side=LEFT)
 # E2 = Entry(frame2,bd=5).pack(side=RIGHT)
 

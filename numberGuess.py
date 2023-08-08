@@ -21,9 +21,10 @@ def number_generator():
     return random_number,lower,upper
 #Game logic
 def num_guess(random_number,lower,upper):
+    guess = 0
     player_guess = -1
-    # print(random_number)
     while True:
+        guess += 1
         player_guess = int(input(f"Guess the random number in the range of {lower} and {upper}: "))
         if abs(random_number - player_guess) > 10000:
             print("You are further than 10000 from the mystery number")
@@ -49,9 +50,10 @@ def num_guess(random_number,lower,upper):
                 print("Your number is too small!")
                 continue
         elif random_number == player_guess:
-            return print(f"Congratulations! You guessed the mystery number of {random_number}")
+            return print(f"Congratulations! You guessed the mystery number of {random_number} in {guess} guesses!")
     
 def play_Game():
     random_number, lower, upper = number_generator()
     num_guess(random_number,lower,upper)
 
+# play_Game()
