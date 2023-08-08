@@ -55,4 +55,3 @@ def play_Game():
     random_number, lower, upper = number_generator()
     num_guess(random_number,lower,upper)
 
-play_Game()
